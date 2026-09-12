@@ -8,7 +8,6 @@
 ## Key facts
 - Accreditation: Cognia (world's largest education accreditation community)
 - Diploma: independent U.S. high-school diploma, globally recognized
-- CEEB code: 050551
 - Grading: U.S. 4.0 GPA system; official transcripts issued from Massachusetts
 - Graduation: 21-24 credits incl. Scientific Literacy, AI Literacy and a PBL Capstone
 - Technology: Canvas LMS, JupiterED SIS, AI English Classroom, AI tools for teachers; LIOS in development
