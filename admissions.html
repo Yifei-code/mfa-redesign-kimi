@@ -128,76 +128,13 @@
       <p class="kicker">02 — Application Form</p>
       <h2 class="h-1">Enrollment <span class="serif-i">Application</span></h2>
     </div>
-    <form class="form-shell reveal" data-endpoint="send_admissions.php" novalidate>
-      <fieldset class="form-sec">
-        <legend><span class="sec-no">A</span> Basic Information</legend>
-        <div class="form-row">
-          <div class="field"><label>Legal Name (Native Language) *</label><input type="text" name="legal_name" placeholder="Must match ID document" required></div>
-          <div class="field"><label>English Name / Pinyin *</label><input type="text" name="english_name" placeholder="Format: Last Name, First Name" required></div>
-        </div>
-        <div class="form-row">
-          <div class="field"><label>Gender *</label><select name="gender" required><option value="">Please select</option><option>Male</option><option>Female</option><option>Other</option></select></div>
-          <div class="field"><label>Date of Birth *</label><input type="date" name="dob" required></div>
-        </div>
-        <div class="form-row">
-          <div class="field"><label>Nationality *</label><input type="text" name="nationality" placeholder="e.g., China" required></div>
-          <div class="field"><label>ID / Passport Number *</label><input type="text" name="id_number" placeholder="ID or passport number" required></div>
-        </div>
-      </fieldset>
-      <fieldset class="form-sec">
-        <legend><span class="sec-no">B</span> Contact Information</legend>
-        <div class="form-row">
-          <div class="field"><label>Primary Email *</label><input type="email" name="email" placeholder="Gmail / Outlook recommended" required></div>
-          <div class="field"><label>Phone Number *</label><input type="tel" name="phone" placeholder="Include country code (e.g., +86)" required></div>
-        </div>
-        <div class="form-row single">
-          <div class="field"><label>Mailing Address *</label><input type="text" name="address" placeholder="Detailed receiving address" required></div>
-        </div>
-      </fieldset>
-      <fieldset class="form-sec">
-        <legend><span class="sec-no">C</span> Academic Background</legend>
-        <div class="form-row">
-          <div class="field"><label>Current School</label><input type="text" name="current_school" placeholder="Full name of school"></div>
-          <div class="field"><label>Current Grade</label><select name="current_grade"><option value="">Please select</option><option>Grade 8</option><option>Grade 9</option><option>Grade 10</option><option>Other</option></select></div>
-        </div>
-        <div class="form-row">
-          <div class="field"><label>Applying For Grade *</label><select name="applying_grade" required><option value="">Please select</option><option>Grade 9</option><option>Grade 10</option><option>Grade 11</option></select></div>
-          <div class="field"><label>Intended Track</label><select name="intended_curriculum"><option value="">Please select</option><option>College Preparatory</option><option>Honors Track</option><option>Talent Program (Athletics / Music)</option><option>Other</option></select></div>
-        </div>
-      </fieldset>
-      <fieldset class="form-sec">
-        <legend><span class="sec-no">D</span> Language &amp; Scores</legend>
-        <div class="form-row">
-          <div class="field"><label>English Proficiency Proof</label><select name="english_proof"><option value="">Please select</option><option>TOEFL</option><option>IELTS</option><option>Duolingo</option><option>None</option></select></div>
-          <div class="field"><label>Standardized Test Scores</label><input type="text" name="test_scores" placeholder="Total score and section scores"></div>
-        </div>
-        <div class="form-row single">
-          <div class="field"><label>School GPA</label><input type="text" name="gpa" placeholder="Example: 85/100 or 3.8/4.0"></div>
-        </div>
-      </fieldset>
-      <fieldset class="form-sec">
-        <legend><span class="sec-no">E</span> Family Information</legend>
-        <div class="form-row">
-          <div class="field"><label>Guardian Name *</label><input type="text" name="guardian_name" required></div>
-          <div class="field"><label>Guardian Phone *</label><input type="tel" name="guardian_phone" required></div>
-        </div>
-        <div class="form-row single">
-          <div class="field"><label>Guardian Occupation</label><input type="text" name="guardian_occupation" placeholder="Company name and title"></div>
-        </div>
-      </fieldset>
-      <fieldset class="form-sec">
-        <legend><span class="sec-no">F</span> Comprehensive Evaluation</legend>
-        <div class="form-row">
-          <div class="field"><label>Interests / Talents</label><input type="text" name="interests" placeholder="Arts, sports, science, etc."></div>
-          <div class="field"><label>Honors Received</label><input type="text" name="honors" placeholder="Award name and level"></div>
-        </div>
-        <div class="form-row single">
-          <div class="field"><label>Personal Statement</label><textarea name="personal_statement" placeholder="300–500 words"></textarea></div>
-        </div>
-      </fieldset>
-      <div class="form-msg" role="status"></div>
-      <button type="submit" class="btn btn-gold" style="width:100%;justify-content:center;padding:1.1rem">Submit Application <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></button>
-    </form>
+        <div class="form-shell reveal" style="text-align:center;padding:3.4rem 2.4rem">
+      <div class="icon" style="width:46px;height:46px;color:var(--gold);margin:0 auto 1.1rem"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 2h8l5 5v13a1.5 1.5 0 0 1-1.5 1.5h-11A1.5 1.5 0 0 1 6 20V2Z"/><path d="M14 2v6h6"/><path d="M9 13h7M9 17h5"/></svg></div>
+      <h3 class="h-2" style="margin-bottom:.9rem">Apply Online in About 15 Minutes</h3>
+      <p style="color:var(--muted);max-width:580px;margin:0 auto 1.8rem">Our application is hosted on a secure online form platform. It walks you through six sections — basic information, contact details, academic background, language &amp; scores, family information, and a personal statement — with bilingual (English / 中文) guidance throughout.</p>
+      <a class="btn btn-gold" href="https://czekfxml.jsjform.com/f/Nm8sQ1" target="_blank" rel="noopener" style="padding:1.05rem 2.3rem">Start the Application <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M4 12h15"/><path d="m13 6 6 6-6 6"/></svg></a>
+      <p style="color:var(--muted);font-size:.86rem;margin:1.6rem 0 0">Applications are reviewed in the order received; our admissions office will contact you within 3–5 business days. Questions: <strong>admissions@meridianfuture.org</strong></p>
+    </div>
   </div>
 </section>
 
