@@ -255,7 +255,13 @@ h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);font-weight:600;line-heigh
 
 /* Stats */
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
-.stat{background:var(--white);padding:2.6rem 1.6rem;text-align:center}
+.stat{background:var(--white);padding:2.6rem 1.6rem;text-align:center;position:relative}
+.stat::after{
+  content:"";position:absolute;left:50%;bottom:1.5rem;width:0;height:2px;
+  background:var(--gold);transform:translateX(-50%);
+  transition:width .9s var(--ease) .9s;
+}
+.stats.in .stat::after{width:26px}
 .stat .num{font-family:var(--serif);font-size:clamp(2.4rem,4vw,3.4rem);font-weight:700;color:var(--ink);line-height:1}
 .stat .num sup{font-size:.45em;color:var(--gold);top:-.7em}
 .stat .lbl{font-family:var(--mono);font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-top:.9rem}

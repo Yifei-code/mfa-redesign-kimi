@@ -70,6 +70,47 @@
     });
   });
 
+  /* Count-up stats — numbers ease from 0 to their final value on scroll-in.
+     HTML keeps final values (no-JS/SEO safe); JS only animates when visible. */
+  var reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  var statNums = document.querySelectorAll(".stat .num");
+  if (statNums.length && !reduceMotion && "IntersectionObserver" in window) {
+    var parseNum = function (el) {
+      var m = el.innerHTML.match(/^\s*(\d+)([\s\S]*)$/);
+      return m ? { target: parseInt(m[1], 10), suffix: m[2] || "" } : null;
+    };
+    var animateNum = function (el, delay) {
+      var parsed = parseNum(el);
+      if (!parsed) return;
+      var dur = 1700;
+      var t0 = null;
+      setTimeout(function () {
+        el.innerHTML = "0" + parsed.suffix;
+        var frame = function (t) {
+          if (t0 === null) t0 = t;
+          var p = Math.min((t - t0) / dur, 1);
+          var e = 1 - Math.pow(1 - p, 4); /* easeOutQuart — fast start, gentle landing */
+          el.innerHTML = Math.round(parsed.target * e) + parsed.suffix;
+          if (p < 1) requestAnimationFrame(frame);
+        };
+        requestAnimationFrame(frame);
+      }, delay);
+    };
+    var statIO = new IntersectionObserver(function (entries) {
+      entries.forEach(function (entry) {
+        if (!entry.isIntersecting) return;
+        var group = entry.target;
+        statIO.unobserve(group);
+        group.classList.add("in");
+        var nums = group.querySelectorAll(".num");
+        nums.forEach(function (el, i) { animateNum(el, i * 130); });
+      });
+    }, { threshold: 0.45 });
+    document.querySelectorAll(".stats").forEach(function (g) { statIO.observe(g); });
+  } else {
+    document.querySelectorAll(".stats").forEach(function (g) { g.classList.add("in"); });
+  }
+
   /* Admissions / contact forms (same backend contract as legacy site) */
   document.querySelectorAll("form[data-endpoint]").forEach(function (form) {
     form.addEventListener("submit", function (ev) {
