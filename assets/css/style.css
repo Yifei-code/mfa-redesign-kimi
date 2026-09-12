@@ -45,7 +45,11 @@ ul{list-style:none}
 ::selection{background:var(--gold);color:#fff}
 
 /* ---------- Typography ---------- */
-h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);font-weight:600;line-height:1.18}
+h1,h2,h3,h4{font-family:var(--serif);color:var(--ink);font-weight:600;line-height:1.18;text-wrap:balance}
+p,li,blockquote{text-wrap:pretty}
+html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] h3,html[lang="zh-CN"] h4,
+html[lang="zh-CN"] p,html[lang="zh-CN"] li{line-break:strict}
+.keep{white-space:nowrap}
 .h-display{font-size:clamp(2.6rem,5.4vw,4.4rem);font-weight:600;letter-spacing:-.01em}
 .h-1{font-size:clamp(2.1rem,4vw,3.1rem)}
 .h-2{font-size:clamp(1.7rem,2.8vw,2.3rem)}
