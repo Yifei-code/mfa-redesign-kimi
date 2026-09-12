@@ -142,8 +142,13 @@
         })
         .catch(function (err) {
           if (!msg) return;
+          /* Graceful fallback while the backend endpoint is not yet deployed:
+             never show a raw error to applicants — point them to email instead. */
+          var zh = document.documentElement.lang === "zh-CN";
           msg.className = "form-msg err";
-          msg.textContent = "Error: " + err.message;
+          msg.innerHTML = zh
+            ? "在线提交暂时不可用。请直接发送邮件至 <a href='mailto:admissions@meridianfuture.org' style='color:inherit;text-decoration:underline'>admissions@meridianfuture.org</a>，我们会在一个工作日内回复您。"
+            : "Online submission is temporarily unavailable. Please email us directly at <a href='mailto:admissions@meridianfuture.org' style='color:inherit;text-decoration:underline'>admissions@meridianfuture.org</a> — we reply within one business day.";
         })
         .finally(function () {
           if (btn) { btn.disabled = false; btn.textContent = btnText; }
