@@ -111,48 +111,4 @@
     document.querySelectorAll(".stats").forEach(function (g) { g.classList.add("in"); });
   }
 
-  /* Admissions / contact forms (same backend contract as legacy site) */
-  document.querySelectorAll("form[data-endpoint]").forEach(function (form) {
-    form.addEventListener("submit", function (ev) {
-      ev.preventDefault();
-      var btn = form.querySelector("[type=submit]");
-      var msg = form.querySelector(".form-msg");
-      var btnText = btn ? btn.textContent : "";
-      if (btn) { btn.disabled = true; btn.textContent = "Submitting…"; }
-      fetch(form.getAttribute("data-endpoint"), {
-        method: "POST",
-        body: new FormData(form)
-      })
-        .then(function (r) {
-          return r.text().then(function (t) {
-            try { return JSON.parse(t); }
-            catch (e) { throw new Error("Server error: " + t); }
-          });
-        })
-        .then(function (data) {
-          if (!msg) return;
-          if (data && data.status === "success") {
-            msg.className = "form-msg ok";
-            msg.textContent = "We have received your request. Thank you — our team will be in touch shortly.";
-            form.reset();
-          } else {
-            msg.className = "form-msg err";
-            msg.textContent = (data && data.message) || "An error occurred. Please try again later.";
-          }
-        })
-        .catch(function (err) {
-          if (!msg) return;
-          /* Graceful fallback while the backend endpoint is not yet deployed:
-             never show a raw error to applicants — point them to email instead. */
-          var zh = document.documentElement.lang === "zh-CN";
-          msg.className = "form-msg err";
-          msg.innerHTML = zh
-            ? "在线提交暂时不可用。请直接发送邮件至 <a href='mailto:admissions@meridianfuture.org' style='color:inherit;text-decoration:underline'>admissions@meridianfuture.org</a>，我们会在一个工作日内回复您。"
-            : "Online submission is temporarily unavailable. Please email us directly at <a href='mailto:admissions@meridianfuture.org' style='color:inherit;text-decoration:underline'>admissions@meridianfuture.org</a> — we reply within one business day.";
-        })
-        .finally(function () {
-          if (btn) { btn.disabled = false; btn.textContent = btnText; }
-        });
-    });
-  });
 })();

@@ -361,21 +361,6 @@ html[lang="zh-CN"] p,html[lang="zh-CN"] li{line-break:strict}
 
 /* ---------- Forms ---------- */
 .form-shell{background:var(--white);border:1px solid var(--line-soft);border-radius:var(--radius);padding:clamp(1.8rem,4vw,3rem);box-shadow:var(--shadow-sm)}
-.form-sec{border:0;margin-bottom:2.2rem}
-.form-sec legend{font-family:var(--serif);font-size:1.2rem;font-weight:600;color:var(--ink);margin-bottom:1.1rem;display:flex;align-items:baseline;gap:.8rem}
-.form-sec legend .sec-no{font-size:.68rem}
-.form-row{display:grid;grid-template-columns:1fr 1fr;gap:1.1rem;margin-bottom:1.1rem}
-.form-row.single{grid-template-columns:1fr}
-.field label{display:block;font-family:var(--mono);font-size:.66rem;letter-spacing:.18em;text-transform:uppercase;color:var(--muted);margin-bottom:.5rem}
-.field input,.field select,.field textarea{
-  width:100%;padding:.85rem 1rem;font-family:var(--sans);font-size:.95rem;color:var(--ink);
-  background:var(--paper);border:1px solid var(--line);border-radius:2px;transition:all .25s;
-}
-.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--gold);background:#fff;box-shadow:0 0 0 3px rgba(174,138,76,.14)}
-.field textarea{min-height:130px;resize:vertical}
-.form-msg{display:none;padding:1rem 1.2rem;border-radius:2px;font-size:.92rem;margin-bottom:1.2rem}
-.form-msg.ok{display:block;background:#EDF5EC;color:#2E5B34;border:1px solid #CBE0C8}
-.form-msg.err{display:block;background:#FBEFEF;color:#7A2E2E;border:1px solid #EFCFCF}
 
 /* ---------- Contact / info panels ---------- */
 .info-panel{background:var(--white);border:1px solid var(--line-soft);border-radius:var(--radius);padding:2.2rem}
@@ -464,7 +449,7 @@ html[lang="zh-CN"] body{font-family:'Inter','Noto Sans SC',-apple-system,BlinkMa
 html[lang="zh-CN"] h1,html[lang="zh-CN"] h2,html[lang="zh-CN"] h3,html[lang="zh-CN"] h4,
 html[lang="zh-CN"] .brand-name,html[lang="zh-CN"] .team-name,html[lang="zh-CN"] .hero-title,
 html[lang="zh-CN"] .faq-item summary,html[lang="zh-CN"] .stat .num,html[lang="zh-CN"] .pull-quote,
-html[lang="zh-CN"] .form-sec legend,html[lang="zh-CN"] .site-footer h4{
+html[lang="zh-CN"] .site-footer h4{
   font-family:'Playfair Display','Noto Serif SC',Georgia,serif;
 }
 html[lang="zh-CN"] .kicker{letter-spacing:.22em;font-size:.74rem}
@@ -506,7 +491,6 @@ html[lang="zh-CN"] .main-nav>li>a{font-size:.95rem}
   .grid-4,.grid-5,.steps{grid-template-columns:1fr}
   .stats{grid-template-columns:1fr}
   .chip-grid{grid-template-columns:1fr}
-  .form-row{grid-template-columns:1fr}
   .footer-main{grid-template-columns:1fr}
   .uni-list{columns:1}
   .hero{min-height:88vh}
