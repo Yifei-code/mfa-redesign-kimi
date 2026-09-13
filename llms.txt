@@ -18,15 +18,15 @@
 - Languages: English (root) and Simplified Chinese (/zh/), cross-linked via hreflang
 
 ## Pages
-- Home: https://www.meridianfuture.org/
-- About: https://www.meridianfuture.org/about.html
-- Academics: https://www.meridianfuture.org/academics.html
-- Innovation & Technology: https://www.meridianfuture.org/innovation.html
-- Talent Programs: https://www.meridianfuture.org/talent.html
-- Academic Outcomes: https://www.meridianfuture.org/academic-outcomes.html
-- Leadership & Faculty: https://www.meridianfuture.org/team.html
-- Admissions: https://www.meridianfuture.org/admissions.html
-- Accreditation: https://www.meridianfuture.org/accreditation.html
-- FAQ: https://www.meridianfuture.org/faq.html
-- Contact: https://www.meridianfuture.org/contact.html
-- 中文站: https://www.meridianfuture.org/zh/
+- Home: https://meridianfuture.org/
+- About: https://meridianfuture.org/about.html
+- Academics: https://meridianfuture.org/academics.html
+- Innovation & Technology: https://meridianfuture.org/canvas-lms.html
+- Talent Programs: https://meridianfuture.org/talent.html
+- Academic Outcomes: https://meridianfuture.org/academic-outcomes.html
+- Leadership & Faculty: https://meridianfuture.org/team.html
+- Admissions: https://meridianfuture.org/admissions.html
+- Accreditation: https://meridianfuture.org/accreditation.html
+- FAQ: https://meridianfuture.org/faq.html
+- Contact: https://meridianfuture.org/contact.html
+- 中文站: https://meridianfuture.org/zh/
