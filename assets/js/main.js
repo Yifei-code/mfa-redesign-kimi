@@ -2,6 +2,9 @@
 (function () {
   "use strict";
 
+  /* JS 可用标记：reveal 动画仅在 JS 启用时隐藏初始态，禁用 JS 时内容默认可见 */
+  document.documentElement.classList.add("js");
+
   /* Sticky header shadow */
   var header = document.querySelector(".site-header");
   if (header) {
