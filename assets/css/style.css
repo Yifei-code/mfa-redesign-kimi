@@ -146,11 +146,10 @@ html[lang="zh-CN"] p,html[lang="zh-CN"] li{line-break:strict}
 .site-header.scrolled{box-shadow:0 6px 24px -12px rgba(14,27,48,.18)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:86px;gap:1rem}
 .brand{display:flex;align-items:center;gap:1rem;flex:none;min-width:0}
-.brand-seal{width:52px;height:52px;flex:none}
+.brand-seal{width:64px;height:64px;flex:none}
 .brand-seal img{width:100%;height:100%;object-fit:contain}
 .brand-text{display:flex;flex-direction:column;line-height:1.15}
 .brand-name{font-family:var(--serif);font-size:1.28rem;font-weight:700;color:var(--ink);letter-spacing:.01em;white-space:nowrap}
-.brand-sub{font-family:var(--mono);font-size:.55rem;letter-spacing:.26em;text-transform:uppercase;color:var(--gold);margin-top:.3rem;white-space:nowrap}
 .main-nav{display:flex;align-items:center;gap:0}
 .main-nav>li{position:relative}
 .main-nav>li>a{
@@ -495,4 +494,7 @@ html[lang="zh-CN"] .main-nav>li>a{font-size:.95rem}
   .uni-list{columns:1}
   .hero{min-height:88vh}
   .team-top{flex-direction:column;align-items:flex-start}
+  .brand{gap:.7rem}
+  .brand-seal{width:46px;height:46px}
+  .brand-name{font-size:1.02rem}
 }
