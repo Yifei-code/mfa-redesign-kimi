@@ -456,6 +456,7 @@ html[lang="zh-CN"] .site-footer h4{
   font-family:'Playfair Display','Noto Serif SC',Georgia,serif;
 }
 html[lang="zh-CN"] .kicker{letter-spacing:.22em;font-size:.74rem}
+html[lang="zh-CN"] .serif-i{font-style:normal;color:var(--gold)}
 html[lang="zh-CN"] .hero-title{letter-spacing:.02em}
 html[lang="zh-CN"] .main-nav>li>a{font-size:.95rem}
 
