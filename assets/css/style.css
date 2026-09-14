@@ -427,11 +427,11 @@ html[lang="zh-CN"] p,html[lang="zh-CN"] li{line-break:strict}
 /* ---------- Reveal animation ---------- */
 .reveal{transition:opacity .8s var(--ease),transform .8s var(--ease)}
 html.js .reveal{opacity:0;transform:translateY(26px)}
-.reveal.in{opacity:1;transform:none}
+html.js .reveal.in{opacity:1;transform:none}
 .reveal-d1{transition-delay:.08s}.reveal-d2{transition-delay:.16s}.reveal-d3{transition-delay:.24s}.reveal-d4{transition-delay:.32s}
 @media (prefers-reduced-motion:reduce){
   *,*::before,*::after{animation:none!important;transition:none!important}
-  .reveal{opacity:1;transform:none}
+  html.js .reveal,.reveal{opacity:1;transform:none}
 }
 
 /* ---------- Language switch ---------- */
