@@ -258,6 +258,9 @@ html[lang="zh-CN"] p,html[lang="zh-CN"] li{line-break:strict}
 
 /* Stats */
 .stats{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--line-soft);border:1px solid var(--line-soft)}
+.stats--bare{display:block;background:transparent;border:0}
+.stats--bare .stat{background:transparent;padding:1.4rem 0 2rem;text-align:left}
+.stats--bare .stat::after{left:0;transform:none}
 .stat{background:var(--white);padding:2.6rem 1.6rem;text-align:center;position:relative}
 .stat::after{
   content:"";position:absolute;left:50%;bottom:1.5rem;width:0;height:2px;
