@@ -146,6 +146,7 @@ html[lang="zh-CN"] p,html[lang="zh-CN"] li{line-break:strict}
 .site-header.scrolled{box-shadow:0 6px 24px -12px rgba(14,27,48,.18)}
 .header-inner{display:flex;align-items:center;justify-content:space-between;height:86px;gap:1rem}
 .brand{display:flex;align-items:center;gap:1rem;flex:none;min-width:0}
+.brand-logo{height:62px;width:auto;display:block}
 .brand-seal{width:64px;height:64px;flex:none}
 .brand-seal img{width:100%;height:100%;object-fit:contain}
 .brand-text{display:flex;flex-direction:column;line-height:1.15}
@@ -412,6 +413,7 @@ html[lang="zh-CN"] p,html[lang="zh-CN"] li{line-break:strict}
 .footer-main{padding:4.5rem 0 3rem;display:grid;grid-template-columns:1.5fr 1fr 1fr 1.2fr;gap:3rem}
 .site-footer h4{color:#fff;font-family:var(--serif);font-size:1.05rem;margin-bottom:1.2rem;font-weight:600}
 .footer-brand .brand-name{color:#fff;font-size:1.3rem}
+.footer-logo{display:block;width:min(300px,100%);height:auto;border-radius:6px;border:1px solid rgba(199,165,95,.3)}
 .footer-brand p{margin-top:1rem;line-height:1.8;font-size:.9rem}
 .footer-links li{margin-bottom:.6rem}
 .footer-links a{color:rgba(255,255,255,.66);transition:all .25s;display:inline-flex;gap:.55rem;align-items:center}
@@ -500,6 +502,7 @@ html[lang="zh-CN"] .main-nav>li>a{font-size:.95rem}
   .hero{min-height:88vh}
   .team-top{flex-direction:column;align-items:flex-start}
   .brand{gap:.7rem}
+  .brand-logo{height:46px}
   .brand-seal{width:46px;height:46px}
   .brand-name{font-size:1.02rem}
 }
