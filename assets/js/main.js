@@ -114,4 +114,46 @@
     document.querySelectorAll(".stats").forEach(function (g) { g.classList.add("in"); });
   }
 
+  /* Forms → self-hosted /api/ backend (urlencoded, JSON response).
+     On any network/backend failure, show a graceful email fallback. */
+  document.querySelectorAll("form[data-endpoint]").forEach(function (form) {
+    form.addEventListener("submit", function (ev) {
+      ev.preventDefault();
+      var btn = form.querySelector("[type=submit]");
+      var msg = form.querySelector(".form-msg");
+      var btnText = btn ? btn.textContent : "";
+      var zh = document.documentElement.lang === "zh-CN";
+      if (btn) { btn.disabled = true; btn.textContent = zh ? "提交中…" : "Submitting…"; }
+      fetch(form.getAttribute("data-endpoint"), {
+        method: "POST",
+        headers: { "Content-Type": "application/x-www-form-urlencoded" },
+        body: new URLSearchParams(new FormData(form)).toString()
+      })
+        .then(function (r) { return r.json(); })
+        .then(function (data) {
+          if (!msg) return;
+          if (data && data.status === "success") {
+            msg.className = "form-msg ok";
+            msg.textContent = zh
+              ? "我们已收到您的提交，感谢耐心等待！招生办公室将在 3–5 个工作日内与您联系。"
+              : "We have received your submission — thank you! Our office will be in touch within 3–5 business days.";
+            form.reset();
+          } else {
+            msg.className = "form-msg err";
+            msg.textContent = (data && data.message) || (zh ? "提交出错，请稍后重试。" : "An error occurred. Please try again later.");
+          }
+        })
+        .catch(function () {
+          if (!msg) return;
+          msg.className = "form-msg err";
+          msg.innerHTML = zh
+            ? "在线提交暂时不可用。请直接发送邮件至 <a href='mailto:admissions@meridianfuture.org' style='color:inherit;text-decoration:underline'>admissions@meridianfuture.org</a>，我们会在一个工作日内回复您。"
+            : "Online submission is temporarily unavailable. Please email us directly at <a href='mailto:admissions@meridianfuture.org' style='color:inherit;text-decoration:underline'>admissions@meridianfuture.org</a> — we reply within one business day.";
+        })
+        .finally(function () {
+          if (btn) { btn.disabled = false; btn.textContent = btnText; }
+        });
+    });
+  });
+
 })();
